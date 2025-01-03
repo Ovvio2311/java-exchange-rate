@@ -1,5 +1,7 @@
 package exchange.app;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -28,7 +30,8 @@ public class ExchangeRateFetcher {
                         .asString();
                 JSONObject json = new JSONObject(response);
                 double jpyToHkd = json.getJSONObject("rates").getDouble("HKD");
-                logger.info("1 JPY = {} HKD", jpyToHkd);
+                String currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+                logger.info("{}, 1 JPY = {} HKD", currentTime, jpyToHkd);
             } catch (Exception e) {
                 logger.error("Error fetching exchange rate", e);
             }
