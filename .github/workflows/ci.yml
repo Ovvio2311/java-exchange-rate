@@ -8,7 +8,7 @@ jobs:
     container:
       image: ghcr.io/jenkinsci/jenkinsfile-runner:master
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses:
           jenkinsci/jfr-container-action@master
         with:
