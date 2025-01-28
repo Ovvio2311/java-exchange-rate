@@ -4,7 +4,7 @@ jobs:
   jenkins-container-pipeline:
     runs-on: ubuntu-22.04
     container:
-      image: ghcr.io/jenkinsci/jenkinsfile-runner@master
+      image: ghcr.io/jenkinsci/jenkinsfile-runner:master
     steps:
       - uses: actions/checkout@v2     
       - uses:
