@@ -1,7 +1,5 @@
 name: Java CI
 on: [push]
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true
 jobs:
   jenkins-container-pipeline:
     runs-on: ubuntu-24.04
