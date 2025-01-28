@@ -2,7 +2,7 @@ name: Java CI
 on: [push]
 jobs:
   jenkins-container-pipeline:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     container:
       image: ghcr.io/jenkinsci/jenkinsfile-runner:master
     steps:
