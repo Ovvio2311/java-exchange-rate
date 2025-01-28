@@ -4,7 +4,7 @@ jobs:
   jenkins-container-pipeline:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/jenkinsci/jenkinsfile-runner:master
+      image: ghcr.io/jenkinsci/jenkinsfile-runner:jre-11
     steps:
       - uses: actions/checkout@v3
       - uses:
