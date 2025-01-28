@@ -11,4 +11,4 @@ jobs:
           command: run
           jenkinsfile: Jenkinsfile
           pluginstxt: plugins.txt
-          jcasc: jcasc.yml
+          #jcasc: jcasc.yml
