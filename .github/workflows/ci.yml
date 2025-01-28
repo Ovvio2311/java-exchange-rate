@@ -2,11 +2,11 @@ name: Java CI
 on: [push]
 jobs:
   jenkins-container-pipeline:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-16.04
     container:
       image: ghcr.io/jenkinsci/jenkinsfile-runner:master
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       - uses:
           jenkinsci/jfr-container-action@master
         with:
