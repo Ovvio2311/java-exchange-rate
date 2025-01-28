@@ -6,10 +6,11 @@ jobs:
     container:
       image: ghcr.io/jenkinsci/jenkinsfile-runner:master
     steps:
-      - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
           node-version: 20
+      - uses: actions/checkout@v2
+     
       - uses:
           jenkinsci/jfr-container-action@master
         with:
