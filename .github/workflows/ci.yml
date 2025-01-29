@@ -12,7 +12,7 @@ jobs:
           node-version: 20
       - uses: actions/checkout@v4
       - uses:
-          jenkinsci/jfr-container-action@master
+          jenkinsci/jfr-container-action@latest
         with:
           command: run
           jenkinsfile: Jenkinsfile
