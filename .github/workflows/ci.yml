@@ -4,7 +4,7 @@ jobs:
   jenkins-container-pipeline:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/jenkinsci/jenkinsfile-runner:master
+      image: ghcr.io/jenkinsci/jenkinsfile-runner:latest
     steps:
       - name: Use Node.js 20
         uses: actions/setup-node@v4
