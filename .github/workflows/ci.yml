@@ -2,9 +2,9 @@ name: Java CI
 on: [push]
 jobs:
   jenkins-container-pipeline:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     container:
-      image: ghcr.io/jenkinsci/jenkinsfile-runner:main
+      image: ghcr.io/jenkinsci/jenkinsfile-runner:latest
     steps:
       - uses: actions/checkout@v3
       - uses:
