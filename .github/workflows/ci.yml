@@ -27,7 +27,7 @@ jobs:
         with:
           command: run
           jenkinsfile: Jenkinsfile
-          #pluginstxt: plugins.txt
+          pluginstxt: plugins.txt
           #jcasc: jcasc.yml
       - name: Ensure credentials are accessible
         run: |
