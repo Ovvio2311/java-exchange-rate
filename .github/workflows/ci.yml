@@ -17,7 +17,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Install additional tools
-        run: sudo apt-get update && sudo apt-get install -y default-jdk
+        run: apt-get update && sudo apt-get install -y default-jdk
       - uses:
           jenkinsci/jfr-container-action@master
           
