@@ -24,7 +24,7 @@ jobs:
           mkdir -p /jenkins_new_plugins
           mkdir -p /jenkinsHome
           mkdir /app/jenkins/WEB-INF/groovy.init.d
-          cp ${GITHUB_ACTION_PATH}/init.groovy /app/jenkins/WEB-INF/groovy.init.d/
+          cp ${{ github.workspace }}/init.groovy /app/jenkins/WEB-INF/groovy.init.d/
       - uses:
           jenkinsci/jfr-container-action@master
           
@@ -33,3 +33,8 @@ jobs:
           jenkinsfile: Jenkinsfile
           #pluginstxt: plugins.txt
           #jcasc: jcasc.yml
+      - name: Ensure credentials are accessible
+        run: |
+          echo "Setting up credentials..."
+          echo "${{ secrets.JENKINS_ADMIN_PASSWORD }}" > /tmp/jenkins_admin_password
+          # Add additional commands to handle other credentials
