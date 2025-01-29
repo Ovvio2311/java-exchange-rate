@@ -14,6 +14,7 @@ jobs:
           distribution: 'adopt'
       - name: Install additional tools
         run: apt-get update && apt-get install -y default-jdk
+      - uses: jenkinsci/jfr-setup-action@master
       # - name: Build Jenkins WAR file
       #   run: |
       #     jar -cvf /app/jenkins/jenkins.war /app/jenkins/*
