@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        sh 'echo hello'
+        sh "JCasC env.hello: ${env.hello}"
       }
     }
 
