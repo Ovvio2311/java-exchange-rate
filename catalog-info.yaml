@@ -1,17 +1,8 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Location
 metadata:
-  name: java-exchange-rate          # Unique name, lowercase-with-dashes
-  description: My existing Java maven application for XYZ feature
-  tags:
-    - java
-    - maven
-    - backend
-  annotations:
-    github.com/project-slug: Ovvio2311/java-exchange-rate   # Helps with links
-    backstage.io/techdocs-ref: dir:.                     # If you have docs in /docs folder
+  name: java-exchange-rate-import
+  description: Points to my Java app catalog-info
 spec:
-  type: service                # or library, website, etc.
-  lifecycle: unknown        # or experimental, deprecated
-  owner: guests     # e.g. team:java-squad or user:jacky
-  # Optional: system: payment-services
+  targets:
+    - https://github.com/Ovvio2311/java-exchange-rate/blob/main/catalog-info.yaml
