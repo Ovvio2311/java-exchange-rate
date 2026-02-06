@@ -1,1 +1,17 @@
-
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: exchange-rate-catalog          # Unique name, lowercase-with-dashes
+  description: My existing Java maven application for XYZ feature
+  tags:
+    - java
+    - maven
+    - backend
+  annotations:
+    github.com/project-slug: ovvio2311/java-exchange-rate   # Helps with links
+    backstage.io/techdocs-ref: dir:.                     # If you have docs in /docs folder
+spec:
+  type: service                # or library, website, etc.
+  lifecycle: production        # or experimental, deprecated
+  owner: your-team-or-user     # e.g. team:java-squad or user:jacky
+  # Optional: system: payment-services
